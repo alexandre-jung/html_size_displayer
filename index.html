@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Size displayer</title>
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+        }
+        p {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: auto;
+            text-align: center;
+            padding-bottom: 50%;
+        }
+        a {
+            text-decoration: none;
+            color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        <h1>
+            Check out the repository on 
+            <a href="https://github.com/alexandre-jung/html_size_displayer.git">
+            GitHub.
+            </a>
+        </h1>
+    </p>
+    <!--
+        The size display element must have the 'size_display' id.
+        Click on the size displayer to show the options.
+
+        * data-opacity:     the default opacity for the displayer (range [0.0-1.0], default: 0.5).
+        * data-color:       set the main color of the displayer (any html valid color, default: gray)
+        * data-disabled:    can be set to 'true' to not display it, any other values will show it.
+        * class:            give it the 'inverted' class to reverse its colors.
+
+        All these attributes (except id) can be omitted.
+    -->
+    <span id="size_display"
+        data-opacity='1'
+        data-color="blueviolet"
+        data-disabled="false"
+        class="inverted"
+        title="Cliquez pour afficher les options">
+    </span>
+
+    <!-- Dont't need to link css, just include the 'size_displayer/size_displayer.js' file -->
+    <script src="size_displayer/size_displayer.js"></script>
+</body>
+
+</html>

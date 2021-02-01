@@ -1,0 +1,133 @@
+#size_display {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(33, 33, 33);
+    background: transparent;
+    padding: 10px;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    opacity: 0.5;
+    user-select: none;
+    z-index: 999;
+    border-radius: 5px;
+}
+
+#size_display.inverted {
+    color: white;
+    background-color: rgb(33, 33, 33);
+}
+
+#size_display:hover {
+    opacity: 1 !important;
+}
+
+/* Sizing for the size displayer */
+#size_display.small {
+    transform: scale(1);
+    transform-origin: bottom right;
+}
+#size_display.normal {
+    transform: scale(2);
+    transform-origin: bottom right;
+}
+#size_display.big {
+    transform: scale(4);
+    transform-origin: bottom right;
+}
+
+/* Style for the options pop-up */
+#options * {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+label {
+    color: rgb(33, 33, 33);
+    display: flex;
+    align-items: center;
+}
+
+.slider-box {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 100px;
+    width: 200px;
+}
+
+[type="radio"],
+[type="checkbox"] {
+    margin: 0;
+    margin-right: 0.5rem;
+    display: inline-block;
+}
+
+#options {
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: rgb(237, 237, 237);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#hide-options {
+    align-self: flex-end;
+}
+
+/* container for the options window */
+#options-modal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 998;
+    display: none;
+    padding: 1rem;
+}
+
+#options div {
+    flex: 0 0;
+    margin-top: 1.5rem;
+    width: 100%;
+}
+
+button {
+    border: none;
+    color: gray;
+    background-color: transparent;
+    font-size: 1.2rem;
+    padding: 1rem;
+    margin-right: -1rem;
+    display: block;
+}
+
+button:hover {
+    color: rgb(33, 33, 33);
+}
+
+#options div.title-bar {
+    width: 100%;
+    margin-top: -1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+}
+
+#options div.title-bar .title {
+    margin-top: 0;
+    border: none;
+}
+
+div#radio {
+    margin-top: 0;
+}
