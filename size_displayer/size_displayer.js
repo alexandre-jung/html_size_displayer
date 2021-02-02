@@ -138,7 +138,9 @@ window.onload = () => {
 
     // Set the default opacity if data-opacity is set
     if ('opacity' in size_display.dataset)
-        size_display.style.opacity = size_display.dataset.opacity;
+        opacity = size_display.dataset.opacity
+    size_display.style.opacity = opacity;
+    transparency_slide.value = opacity * 100;
 
     //     // Display a help message
     //     if (!('_message_shown' in localStorage)) {
