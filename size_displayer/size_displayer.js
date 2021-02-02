@@ -22,6 +22,7 @@ let options_modal = document.createElement('div');
 document.body.append(options_modal);
 options_modal.innerHTML = `
 <div id="options-modal">
+</div>
 <div id="options">
     <div class="title-bar">
         <div class="title"><b>Réglages</b></div>
@@ -39,13 +40,14 @@ options_modal.innerHTML = `
     <div>
         <label for="invert"><input type="checkbox" id="invert" checked> Inverser les couleurs</label>
     </div>
-</div>
 </div>`;
 
 
 ////////////////////////////////////////////////////////////////////
 // Select elements
 ////////////////////////////////////////////////////////////////////
+let options = document.querySelector('#options');
+let options_background = document.querySelector('#options-modal');
 let small_radio = document.querySelector("#small");
 let normal_radio = document.querySelector("#normal");
 let big_radio = document.querySelector("#big");
@@ -59,10 +61,12 @@ let invert_colors_cb = document.querySelector('#invert');
 ////////////////////////////////////////////////////////////////////
 // options pop-up visibility
 function show_options() {
-    document.querySelector('#options-modal').style.display = 'flex';
+    options_background.style.display = 'block';
+    options.style.display = 'flex';
 }
 function hide_options() {
-    document.querySelector('#options-modal').style.display = 'none';
+    options_background.style.display = 'none';
+    options.style.display = 'none';
 }
 
 // update the displayer to display the current window size
